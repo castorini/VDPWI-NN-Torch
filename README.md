@@ -15,7 +15,7 @@ https://github.com/torch/distro
 
 - Currently our tool only runs on CPUs, therefore it is recommended to use INTEL MKL library (or at least OpenBLAS lib) so Torch can run much faster on CPUs. 
 
-- Our tool then requires Glove embeddings by Stanford. Please run fetech_and_preprocess.sh for downloading and preprocessing this data set (around 3 GBs).
+- Our tool then requires Glove embeddings by Stanford. Please run fetch_and_preprocess.sh for downloading and preprocessing this data set (around 3 GBs).
 
 
 Running
