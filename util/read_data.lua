@@ -58,11 +58,11 @@ function similarityMeasure.read_sentences(path, vocab, fixed, stopWord)
     for i = 1, len do
       local token = tokens[i]
       sent[i] = vocab:index(token)
-      if stopWord[sent[i]] == 1 then
-        stopSeq[i] = 1     
-      else
-        stopSeq[i] = 0
-      end
+      --if stopWord[sent[i]] == 1 then
+      --  stopSeq[i] = 1     
+      --else
+      --  stopSeq[i] = 0
+      --end
     end
     
     ---Maynot be useful th following block
@@ -102,7 +102,7 @@ function similarityMeasure.read_relatedness_dataset(dir, vocab, task)
 	  file1 = 'a.toks'
 	  file2 = 'b.toks'
   end
-  local stopWord = similarityMeasure.read_stop_words('util/english', vocab)
+  local stopWord = nil --similarityMeasure.read_stop_words('util/english', vocab)
   dataset.lsents, dataset.lmaxsize, dataset.lstop, dataset.lraw = similarityMeasure.read_sentences(dir .. file1, vocab, false, stopWord)
   dataset.rsents, dataset.rmaxsize, dataset.rstop, dataset.rraw = similarityMeasure.read_sentences(dir .. file2, vocab, false, stopWord)
 
