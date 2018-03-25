@@ -33,6 +33,12 @@ function header(s)
   print(string.rep('-', 80))
 end
 
+function pearson(x, y)
+  x = x - x:mean()
+  y = y - y:mean()
+  return x:dot(y) / (x:norm() * y:norm())
+end
+
 -- read command line arguments
 local args = lapp [[
 Training script for semantic relatedness prediction on the Twitter dataset.
